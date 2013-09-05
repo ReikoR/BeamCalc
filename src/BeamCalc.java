@@ -44,7 +44,8 @@ public class BeamCalc {
             File dir = dirs[i];
             //if (dir.isFile() && dir.getName().matches("MER_FR__2P.*\\.N1")) {
             //System.out.println(dir.getName());
-            if (dir.isFile() && dir.getName().matches("([^\\s]+(\\.(?i)(N1))$)")) {
+            //if (dir.isFile() && dir.getName().matches("([^\\s]+(\\.(?i)(N1))$)")) {
+            if (dir.isFile() && dir.getName().matches(".*\\.N1")) {
                 //System.out.println(dir.getAbsolutePath());
                 //BeamTest.calcIndex(dir.getAbsolutePath());
                 Thread t = new Thread(new IndexCalc(dir.getName()));
